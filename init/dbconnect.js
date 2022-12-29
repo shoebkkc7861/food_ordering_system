@@ -1,14 +1,14 @@
-let {Sequelize,Model,DataTypes,QueryTypes,Op}=require("sequelize");
+let { Sequelize, Model, DataTypes, QueryTypes, Op } = require("sequelize");
 
-let sequelize= new Sequelize("mysql://root:@localhost/food_delivery_system") //"mysql://root:@localhost/e_commerce"
+let sequelize = new Sequelize("mysql://root:MyStrongPassword1234$@localhost/food_delivery_system") //"mysql://root:@localhost/e_commerce"
 
-sequelize.authenticate().then(()=>{
+sequelize.authenticate().then(() => {
     console.log("Connected To Database")
-}).catch(()=>{
+}).catch(() => {
     console.log("Not connected To Database")
 })
 
-module.exports= {
+module.exports = {
     sequelize,
     Model,
     DataTypes,
